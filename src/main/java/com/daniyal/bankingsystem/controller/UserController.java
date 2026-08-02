@@ -3,6 +3,7 @@ package com.daniyal.bankingsystem.controller;
 import com.daniyal.bankingsystem.responseDto.ResponseUserDto;
 import com.daniyal.bankingsystem.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,5 +21,10 @@ public class UserController {
     @GetMapping
     public List<ResponseUserDto> findAllUsers(){
         return userService.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseUserDto findUserById(@PathVariable long id){
+        return userService.findById(id);
     }
 }
