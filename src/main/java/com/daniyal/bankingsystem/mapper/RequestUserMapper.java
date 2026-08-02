@@ -5,7 +5,7 @@ import com.daniyal.bankingsystem.requestDto.RequestUserDto;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface UserMapper {
+public interface RequestUserMapper {
     RequestUserDto toDto(User user);
 
     User toEntity(RequestUserDto requestUserDto);
