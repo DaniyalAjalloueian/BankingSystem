@@ -1,11 +1,9 @@
 package com.daniyal.bankingsystem.controller;
 
+import com.daniyal.bankingsystem.requestDto.RequestUserDto;
 import com.daniyal.bankingsystem.responseDto.ResponseUserDto;
 import com.daniyal.bankingsystem.service.UserService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +24,10 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseUserDto findUserById(@PathVariable long id){
         return userService.findById(id);
+    }
+
+    @PostMapping
+    public ResponseUserDto saveUSer(@RequestBody RequestUserDto requestUserDto){
+        return userService.saveUser(requestUserDto);
     }
 }
