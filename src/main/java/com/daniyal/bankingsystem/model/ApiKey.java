@@ -21,7 +21,8 @@ public class ApiKey {
     public ApiKey() {
     }
 
-    public ApiKey(Boolean active, User user) {
+    public ApiKey(String apiKey, Boolean active, User user) {
+        this.apiKey = apiKey;
         this.active = active;
         this.user = user;
     }

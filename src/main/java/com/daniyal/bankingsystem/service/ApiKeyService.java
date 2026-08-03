@@ -1,5 +1,7 @@
 package com.daniyal.bankingsystem.service;
 
+import com.daniyal.bankingsystem.model.ApiKey;
+import com.daniyal.bankingsystem.model.User;
 import com.daniyal.bankingsystem.util.ApiKeyGenerator;
 import org.springframework.stereotype.Service;
 

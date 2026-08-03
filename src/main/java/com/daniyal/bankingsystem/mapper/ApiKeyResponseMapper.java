@@ -6,5 +6,5 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface ApiKeyResponseMapper {
-    ApiKeyResponse toApiKeyResponse(ApiKey apiKey);
+    ApiKeyResponse toApiKeyResponse(String apiKey);
 }
