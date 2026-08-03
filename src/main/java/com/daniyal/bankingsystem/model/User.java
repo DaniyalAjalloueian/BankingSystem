@@ -19,6 +19,9 @@ public class User {
 
     private String password;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private ApiKey apiKey;
+
     public User() {
     }
 
@@ -67,5 +70,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public ApiKey getApiKey() {
+        return apiKey;
+    }
+
+    public void setApiKey(ApiKey apiKey) {
+        this.apiKey = apiKey;
     }
 }
