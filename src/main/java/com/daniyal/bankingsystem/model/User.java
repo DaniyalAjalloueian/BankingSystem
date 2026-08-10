@@ -19,8 +19,11 @@ public class User {
 
     private String password;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    private ApiKey apiKey;
+//    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+//    private ApiKey apiKey;
+
+    @OneToOne(mappedBy = "accountHolder")
+    private BankAccount bankAccount;
 
     public User() {
     }
@@ -72,11 +75,20 @@ public class User {
         this.password = password;
     }
 
-    public ApiKey getApiKey() {
-        return apiKey;
+//    public ApiKey getApiKey() {
+//        return apiKey;
+//    }
+//
+//    public void setApiKey(ApiKey apiKey) {
+//        this.apiKey = apiKey;
+//    }
+
+
+    public BankAccount getBankAccount() {
+        return bankAccount;
     }
 
-    public void setApiKey(ApiKey apiKey) {
-        this.apiKey = apiKey;
+    public void setBankAccount(BankAccount bankAccount) {
+        this.bankAccount = bankAccount;
     }
 }
