@@ -14,7 +14,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 import java.util.List;
 
-@Component
+//@Component  (disabled api key)
 public class AuthenticationFilter extends OncePerRequestFilter {
 
     private final ApiKeyService apiKeyService;
