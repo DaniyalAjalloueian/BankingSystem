@@ -27,8 +27,4 @@ public class UserController {
         return userService.findById(id);
     }
 
-    @PostMapping
-    public UserResponseWithApiKey saveUSer(@RequestBody RequestUserDto requestUserDto){
-        return userService.saveUser(requestUserDto);
-    }
 }
