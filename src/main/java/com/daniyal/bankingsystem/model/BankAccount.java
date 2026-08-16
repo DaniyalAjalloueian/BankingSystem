@@ -11,10 +11,18 @@ public class BankAccount {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, precision = 19, scale = 2)
+    @Column(nullable = false)
     private BigDecimal balance = BigDecimal.ZERO;
 
     @OneToOne
     @JoinColumn(nullable = false, unique = true)
     private User accountHolder;
+
+    public BankAccount(User user) {
+        this.accountHolder = user;
+    }
+
+    public BankAccount() {
+
+    }
 }
