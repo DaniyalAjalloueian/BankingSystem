@@ -1,5 +1,6 @@
 package com.daniyal.bankingsystem.model;
 
+import com.daniyal.bankingsystem.responseDto.ExpiryDate;
 import com.daniyal.bankingsystem.util.CardGenerator;
 import jakarta.persistence.*;
 
@@ -21,18 +22,22 @@ public class Card {
     private String cvv2;
 
     @Column(nullable = false)
-    private Integer expiryMonth;
+    private String expiryMonth;
 
     @Column(nullable = false)
-    private Integer expiryYear;
+    private String expiryYear;
 
     public Card() {
     }
 
     public Card(User user) {
+        ExpiryDate expiryDate = CardGenerator.generateExpiryYearAndMonth();
         this.bankAccount = user.getBankAccount();
         this.cardNumber = CardGenerator.generateCardNumber();
         this.cvv2 = CardGenerator.generateCVV2();
+        this.expiryYear = expiryDate.year();
+        this.expiryMonth = expiryDate.month();
+
     }
 
     public Long getId() {
@@ -67,19 +72,19 @@ public class Card {
         this.cvv2 = cvv2;
     }
 
-    public Integer getExpiryMonth() {
+    public String getExpiryMonth() {
         return expiryMonth;
     }
 
-    public void setExpiryMonth(Integer expiryMonth) {
+    public void setExpiryMonth(String expiryMonth) {
         this.expiryMonth = expiryMonth;
     }
 
-    public Integer getExpiryYear() {
+    public String getExpiryYear() {
         return expiryYear;
     }
 
-    public void setExpiryYear(Integer expiryYear) {
+    public void setExpiryYear(String expiryYear) {
         this.expiryYear = expiryYear;
     }
 }

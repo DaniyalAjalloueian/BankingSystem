@@ -24,6 +24,7 @@ public final class CardGenerator {
     }
 
     public static ExpiryDate generateExpiryYearAndMonth(){
+
         LocalDate expiryDate = LocalDate.now().plusYears(5);
         return new ExpiryDate(
                 String.valueOf(expiryDate.getYear() % 100),
