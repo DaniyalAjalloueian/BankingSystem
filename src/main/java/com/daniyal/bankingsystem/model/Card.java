@@ -1,5 +1,6 @@
 package com.daniyal.bankingsystem.model;
 
+import com.daniyal.bankingsystem.util.CardGenerator;
 import jakarta.persistence.*;
 
 @Entity
@@ -30,6 +31,8 @@ public class Card {
 
     public Card(User user) {
         this.bankAccount = user.getBankAccount();
+        this.cardNumber = CardGenerator.generateCardNumber();
+        this.cvv2 = CardGenerator.generateCVV2();
     }
 
     public Long getId() {
