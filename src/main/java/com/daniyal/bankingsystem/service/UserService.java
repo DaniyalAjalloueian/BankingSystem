@@ -62,7 +62,7 @@ public class UserService {
 
         ApiKey apiKey = new ApiKey(encodedKey, true, user);
 
-        user.setApiKey(apiKey);
+//        user.setApiKey(apiKey);
         User savedUser = userRepository.save(user);
         ResponseUserDto responseUserDto = responseUserMapper.toDto(savedUser);
         return new UserResponseWithApiKey(responseUserDto,apiKeyResponse);

@@ -28,6 +28,10 @@ public class Card {
     public Card() {
     }
 
+    public Card(User user) {
+        this.bankAccount = user.getBankAccount();
+    }
+
     public Long getId() {
         return id;
     }
