@@ -2,7 +2,6 @@ package com.daniyal.bankingsystem.service;
 
 import com.daniyal.bankingsystem.exception.UserNotFound;
 import com.daniyal.bankingsystem.exception.UsernameAlreadyExistsException;
-import com.daniyal.bankingsystem.mapper.ApiKeyResponseMapper;
 import com.daniyal.bankingsystem.mapper.BankAccountMapper;
 import com.daniyal.bankingsystem.mapper.RequestUserMapper;
 import com.daniyal.bankingsystem.mapper.ResponseUserMapper;

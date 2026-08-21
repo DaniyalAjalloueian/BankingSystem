@@ -1,4 +1,4 @@
-package com.daniyal.bankingsystem.responseDto;
-
-public record ApiKeyResponse(String apiKey) {
-}
+//package com.daniyal.bankingsystem.responseDto;
+//
+//public record ApiKeyResponse(String apiKey) {
+//}
