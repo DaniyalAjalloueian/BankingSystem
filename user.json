@@ -1,0 +1,18 @@
+{
+    "user": {
+        "id": 1,
+        "firstName": "Daniyal",
+        "lastName": "Ajalloueian",
+        "userName": "dani"
+    },
+    "bankAccount": {
+        "id": 1,
+        "balance": 0
+    },
+    "card": {
+        "cardNumber": "6037806566919465",
+        "cvv2": "3135",
+        "expiryYear": "31",
+        "expiryMonth": "08"
+    }
+}
