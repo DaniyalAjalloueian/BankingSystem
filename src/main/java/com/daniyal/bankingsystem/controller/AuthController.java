@@ -1,7 +1,7 @@
 package com.daniyal.bankingsystem.controller;
 
 import com.daniyal.bankingsystem.requestDto.RequestUserDto;
-import com.daniyal.bankingsystem.responseDto.UserResponseWithApiKey;
+import com.daniyal.bankingsystem.responseDto.FullUserResponse;
 import com.daniyal.bankingsystem.service.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +18,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public UserResponseWithApiKey saveUser(@RequestBody RequestUserDto requestUserDto) {
+    public FullUserResponse saveUser(@RequestBody RequestUserDto requestUserDto) {
         return userService.saveUser(requestUserDto);
     }
 }

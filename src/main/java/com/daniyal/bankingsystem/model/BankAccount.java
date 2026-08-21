@@ -25,4 +25,28 @@ public class BankAccount {
     public BankAccount() {
 
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    private void setId(Long id) {
+        this.id = id;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
+    }
+
+    public User getAccountHolder() {
+        return accountHolder;
+    }
+
+    public void setAccountHolder(User accountHolder) {
+        this.accountHolder = accountHolder;
+    }
 }

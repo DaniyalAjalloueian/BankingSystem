@@ -1,8 +1,6 @@
 package com.daniyal.bankingsystem.controller;
 
-import com.daniyal.bankingsystem.requestDto.RequestUserDto;
 import com.daniyal.bankingsystem.responseDto.ResponseUserDto;
-import com.daniyal.bankingsystem.responseDto.UserResponseWithApiKey;
 import com.daniyal.bankingsystem.service.UserService;
 import org.springframework.web.bind.annotation.*;
 

@@ -18,7 +18,7 @@ public class Card {
     @JoinColumn(nullable = false, unique = true)
     private BankAccount bankAccount;
 
-    @Column(nullable = false, length = 3)
+    @Column(nullable = false, length = 4)
     private String cvv2;
 
     @Column(nullable = false)
