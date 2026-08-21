@@ -10,9 +10,9 @@ public final class CardGenerator {
     private static final SecureRandom random = new SecureRandom();
 
     public static String generateCardNumber() {
-        StringBuilder cardNumber = new StringBuilder();
+        StringBuilder cardNumber = new StringBuilder("6037");
 
-        for (int i = 0; i < 16; i++) {
+        for (int i = 0; i < 12; i++) {
             cardNumber.append(random.nextInt(10));
         }
 
